@@ -24,7 +24,7 @@ from ..utils.resource.RESOURCE_PATH import ICON_PATH
 TEXT_PATH = Path(__file__).parent / "texture2d"
 
 
-@gs_cache(1800)
+@gs_cache(1800, skip_text=True)
 async def draw_my_pack(uid: str, ev: Event) -> Union[str, bytes]:
     raw = await get_all_char_dict()
     data = await mys_api.get_batch_compute_info(uid, raw)

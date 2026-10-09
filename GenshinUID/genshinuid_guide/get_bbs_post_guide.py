@@ -10,7 +10,7 @@ CID = "1386819"
 colloctions = []
 
 
-@gs_cache(14200)
+@gs_cache(14200, skip_text=True)
 async def get_material_way_post(name: str):
     global colloctions
     if not colloctions:
